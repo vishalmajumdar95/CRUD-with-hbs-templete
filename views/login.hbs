@@ -1,0 +1,29 @@
+
+<h1>Create User</h1>
+
+{{#if serverError}}
+<div class="alert alert-danger">{{serverError}}</div>
+{{/if}}
+
+<form action="" method="POST">
+  <div class="form-group">
+    <label for="">First Name</label>
+    <input type="text" name="first_name" class="form-control" id="" value="">
+  </div>
+
+  <div class="form-group">
+    <label for="">Last Name</label>
+    <input type="text" name="last_name" class="form-control" id="" value="">
+  </div>
+  <div class="form-group">
+    <label for="">Mobile</label>
+    <input type="number" name="mobile" class="form-control" id="" value="">
+  </div>
+  <div class="form-group">
+    <label for="">Email</label>
+    <input type="email" name="email" class="form-control" id="" value="">
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary"> Login user </button>
+  </div>
+</form>

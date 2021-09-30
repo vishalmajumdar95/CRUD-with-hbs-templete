@@ -1,0 +1,36 @@
+<h1>User List</h1>
+
+{{#if serverSuccess}}
+<div class="alert alert-success">{{serverSuccess}}</div>
+{{/if}}
+{{#if serverError}}
+  <div class="alert alert-danger">{{serverError}}</div>
+{{/if}}
+
+<a href="/create" class="btn btn-primary mb-3">Create New User</a>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Mobile</th>
+      <th scope="col">Email</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>options.serverError
+  <tbody>
+    {{#each userList}}
+      <tr>
+        <th scope="row">{{this.first_name}}</th>
+        <td>{{this.last_name}}</td>
+        <td>{{this.mobile}}</td>
+        <td>{{this.email}}</td>
+        <td>
+          <a href="/edit/{{this.id}}" class="btn btn-primary ">Edit</a>
+          <a href="/delete/{{this.id}}" class="btn btn-danger ">Delete</a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
